@@ -32,7 +32,7 @@
         <tbody>
         <tr *ngFor="let item of ExpensesTenantList">
           <td class="table-id">{{ item.id }}</td>
-          <td>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}</td>
+        <td>{{ item.date | date}}&nbsp; &nbsp;</td>
           <td>{{ item.TenantName }}</td>
           <td>{{ item.amountPaid }}</td>
 

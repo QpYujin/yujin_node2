@@ -64,6 +64,7 @@ saveUser() {
 
     this.tenantService.addTenant(this.userForm.value).then(() => {
       console.log("sucess")
+      localStorage.setItem('firstLoad','Y');
       this.showAlert();
       this.userForm.reset()
 

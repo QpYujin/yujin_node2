@@ -10,9 +10,6 @@ import { routing }       from './add-community.routing';
 import {TenantService} from '../../../../restApi/tetants.services';
 import{ EditorsModule} from '../../editors/editors.module'
 import { ControlMessagesComponent } from '../../shared/formValidation/control-messages.component';
-import { UsersMap } from '../../dashboard/usersMap';
-import { UsersMapService } from '../../dashboard/usersMap/usersMap.service';
-import { MapsAPILoader } from '@agm/core';
 
 @NgModule({
   imports: [
@@ -21,21 +18,15 @@ import { MapsAPILoader } from '@agm/core';
     ReactiveFormsModule,
     FormsModule,
     NgaModule,
-    routing,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB-59QEf0Y6j_EBoOxRBp0HM8dJ3PZ0mGg',
-      libraries: ["places"]
-    })
+    routing
   ],
   declarations: [
     AddCommunityComponent,
-    ControlMessagesComponent,
-    UsersMap
+    ControlMessagesComponent
   ],
   providers: [
     CommunityService,
-    TenantService,
-    UsersMapService
+    TenantService
 
   ]
 })

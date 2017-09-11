@@ -15,8 +15,8 @@
 
   </div>
   <div class="col-sm-1">
-    <h4> <a class="btn btn-primary" *ngIf="!authService.authenticated()" style="height: 30px;color: white" (click)="authService.login()"><h4>LOG IN</h4></a></h4>
-    <h4> <a class="btn btn-primary" *ngIf="authService.authenticated()" style="height: 30px;color: white"  (click)="authService.logout()"><h4>LOG OUT</h4></a></h4>
+    <h4> <a class="btn btn-info btn-home-login" *ngIf="!authService.authenticated()" style="height: 30px;color: white" (click)="authService.login()"><h4>LOG IN</h4></a></h4>
+    <h4> <a class="btn btn-info btn-home-login" *ngIf="authService.authenticated()" style="height: 30px;color: white"  (click)="authService.logout()"><h4>LOG OUT</h4></a></h4>
   </div>
 
 </div>
@@ -24,14 +24,39 @@
 
   <div class="auth-block" *ngIf="tenantAccess==false">
 
-    <h1 >!!! Welcome !!!</h1>
 
-    <h2 *ngIf="!setBoolean"> <a routerLink="/addCommunity" class="auth-link" >Want to add a new Community? Add Community</a></h2>
+    <h2 *ngIf="!setBoolean"> 
+     
+      
+   <div class="container ">
+      <h1>Start Adding Your Community Now</h1>
+      <div class="form-group">
+        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+      </div>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+    </div>
+    <a routerLink="/addCommunity" class="auth-link" >
 
-    <h2  *ngIf="setBoolean" > <a routerLink="/pages" class="auth-link"  >Want to go community dashboard ? Go to Dashboard </a></h2>
+<button class="btn btn-primary btn-raised" type="button">Click Here after selecting your Community</button>
 
 
-  </div>
+    </a></h2>
+
+    <h2  *ngIf="setBoolean" > <a routerLink="/pages" class="auth-link"  > View Your Community </a>
+     
+   <div class="container ">
+      <h1>Click to Add More Communities(Paid Feature)</h1>
+      <div class="form-group">
+        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+      </div>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+    </div>
+
+  </h2>
 
   <div class="auth-block" *ngIf="tenantAccess==true">
 
