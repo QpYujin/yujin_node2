@@ -1,0 +1,52 @@
+
+<div class="row ">
+
+
+  <div class="col-sm-9">
+
+
+  </div>
+  <div class="col-sm-1">
+    <!--<h4>HOME</h4>-->
+
+  </div>
+  <div class="col-sm-1">
+    <!--<h4>ABOUT</h4>-->
+
+  </div>
+  <div class="col-sm-1">
+    <h4> <a class="btn btn-primary" *ngIf="!authService.authenticated()" style="height: 30px;color: white" (click)="authService.login()"><h4>LOG IN</h4></a></h4>
+    <h4> <a class="btn btn-primary" *ngIf="authService.authenticated()" style="height: 30px;color: white"  (click)="authService.logout()"><h4>LOG OUT</h4></a></h4>
+  </div>
+
+</div>
+<div class="auth-main">
+
+  <div class="auth-block" *ngIf="tenantAccess==false">
+
+    <h1 >!!! Welcome !!!</h1>
+
+    <h2 *ngIf="!setBoolean"> <a routerLink="/addCommunity" class="auth-link" >Want to add a new Community? Add Community</a></h2>
+
+    <h2  *ngIf="setBoolean" > <a routerLink="/pages" class="auth-link"  >Want to go community dashboard ? Go to Dashboard </a></h2>
+
+
+  </div>
+
+  <div class="auth-block" *ngIf="tenantAccess==true">
+
+    <h1 >!!! Welcome !!!</h1>
+
+
+      <div class="row">
+        <a class="auth-link" style="color: black">Click here to &nbsp;</a>
+      <a  routerLink="/tenantPayment" class="auth-link" >View Tenant Expenses /&nbsp;</a>
+      <a style="color: #b32d00" routerLink="/communityExpenses" class="auth-link" >Community Expenses </a>
+    </div>
+
+
+
+  </div>
+
+
+</div>

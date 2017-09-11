@@ -1,0 +1,41 @@
+@import '../../../../theme/sass/conf/conf';
+
+/deep/.cke_source {
+  color: $dropdown-text!important;
+}
+.table-striped thead tr th{
+  white-space: initial !important;
+}
+@media screen and (max-width: 799px) {
+  .responsive-table{
+    display: none;
+  }
+  .responsive-list{
+  }
+  .tenant-list-item{
+    //padding: 10px 10px 0px 90px;
+    min-height: 64px;
+    border-bottom: 1px solid #fff;
+
+    .img-profile{
+      width: 72px;
+      height: 72px;
+      position: absolute;
+      margin-left: -90px;
+    }
+
+    p{
+      line-height: 20px;
+    }
+  }
+
+}
+@media screen and (min-width: 800px) {
+  .responsive-table{
+  }
+  .responsive-list{
+    display: none;
+  }
+}
+
+

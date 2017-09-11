@@ -1,0 +1,10 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="16" >
+  <agm-circle *ngFor="let datum of mMapData"
+    [latitude]="datum.latitude"
+    [longitude]="datum.longitude"
+
+    [clickable]="true"
+    [fillColor]="getThemeColor(datum.topic_tag)"
+    [fillOpacity]="0.5">
+  </agm-circle>
+</agm-map>

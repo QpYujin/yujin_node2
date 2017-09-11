@@ -1,0 +1,29 @@
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}">
+     <div class="header-title-community">
+       <a routerLink="/pages/dashboard">{{community}}</a>
+       <!-- <a routerLink="/pages/dashboard" class="al-logo clearfix">{{community}}</a>        -->
+     </div>
+  <a routerLink="/home" class="al-logo clearfix"><span></span>Consensus</a>
+  <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+
+  <!--<div class="search">
+    <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
+    <input id="searchInput" type="text" placeholder="Search for...">
+  </div>-->
+  <div class="user-profile clearfix">
+    <div class="dropdown al-user-profile">
+      <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+        <img src="https://t4.ftcdn.net/jpg/01/07/85/89/240_F_107858989_SJogeLthvc6WZ6lP6EsuLlxIRNtsz4JH.jpg" height="45px" width ="45px">
+      </a>
+
+      <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+
+        <li class="dropdown-item"><a href><i class="fa fa-user"></i>{{user}}</a></li>
+        <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>
+        <li class="dropdown-item"><a href class="signout" (click)=authService.logout() ><i class="fa fa-power-off"></i>Sign out</a></li>
+      </ul>
+    </div>
+   <!-- <ba-msg-center></ba-msg-center>-->
+  </div>
+</div>

@@ -1,0 +1,224 @@
+<div class="col-md-8" >
+<div class="colorChange">
+
+
+
+  <ba-card  baCardClass="with-scroll">
+
+    <!--<div>
+      <label>Gender</label>
+      <div  *ngFor="let gender of genders">
+        <label>
+          <input type="radio" name="gender"  [value]="gender.value">
+          {{gender.display}}
+        </label>
+      </div>
+    </div>-->
+  <form [formGroup]="userForm" (submit)="saveUser()">
+
+
+  <!--<label for="name">Name</label>
+  <input formControlName="name" id="name" required/>
+  <control-messages [control]="userForm.controls.name"></control-messages>-->
+
+
+    <label for="firstName">First Name</label>
+    <input formControlName="firstName" id="firstName" />
+    <control-messages [control]="userForm.controls.firstName"></control-messages>
+
+    <label for="lastName">Last Name</label>
+    <input formControlName="lastName" id="lastName" />
+    <control-messages [control]="userForm.controls.lastName"></control-messages>
+
+  <label for="email">Email Address</label>
+  <input formControlName="email" id="email" />
+  <control-messages [control]="userForm.controls.email"></control-messages>
+
+
+<div>
+    <div class="input-demo radio-demo row">
+      <div class="col-md-4">
+        <label class="radio-inline custom-radio nowrap">
+          <input type="radio" name="hgjj"  value="female" formControlName="gender">
+          <span >Female</span>
+        </label>
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline custom-radio nowrap">
+          <input type="radio" name="hgjj"  value="male" formControlName="gender">
+          <span>Male</span>
+        </label>
+      </div>
+    </div>
+</div>
+
+    <div>
+    <div class="input-demo radio-demo row">
+      <div class="col-md-4">
+        <label class="radio-inline custom-radio nowrap">
+          <input type="radio" name="inlineRadioOptions"  value="married" formControlName="status">
+          <span >Married</span>
+        </label>
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline custom-radio nowrap">
+          <input type="radio" name="inlineRadioOptions"  value="unMarried" formControlName="status">
+          <span>Unmarried</span>
+        </label>
+      </div>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label >Number of Dependents</label>
+      <select   id="exampleSelect1" name="noOfDependent" formControlName="noOfDependent" >
+        <option name="0" >0</option>
+        <option name="1" >1</option>
+        <option name="2" >2</option>
+        <option name="3" >3</option>
+        <option name="4" >4</option>
+        <option name="5">5</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleSelect1">Select the Hobbies</label>
+      <select class="form" id="exampleSelect1"   formControlName="hobbies" >
+        <option name="Reading" >Reading</option>
+        <option name="Swimming" >Swimming</option>
+        <option name="Dancing" >Dancing</option>
+      </select>
+    </div>
+
+
+    <!--<label for="profile">Profile Description</label>
+  <textarea formControlName="profile" id="profile"></textarea>
+  <control-messages [control]="userForm.controls.profile"></control-messages>-->
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+
+</ba-card>
+
+</div>
+</div>
+
+
+<!--
+<div class="col-md-8" >
+  <div class="colorChange">
+    <ba-card  baCardClass="with-scroll">
+      <form #form="ngForm" (ngSubmit)="submitForm(form.value)" class="formColor">
+        <div class="form-group">
+          <label name="firstName">First Name</label>
+          <input  class="form-control" id="firsName" placeholder="First Name" name="firstName"  ngModel>
+        </div>
+
+        <div class="form-group">
+          <label >Last Name</label>
+          <input  class="form-control" id="exampleInputPassword5" placeholder="Last Name" name="lastName" ngModel>
+        </div>
+
+        <div class="form-group">
+          <label >Email address</label>
+          <input  class="form-control" id="exampleInputPassword2" placeholder="Email address" ngModel>
+        </div>
+
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio5" name="female" class="form-control" value="option1" ngModel >
+                <span translate>Female</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio3"  name="male" value="option2" ngModel>
+                <span>Male</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label >Date Of Birth</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="dateOfBirth" placeholder="Date Of Birth" ngModel>
+        </div>
+
+
+
+
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="inlineRadio4" value="option1" name="married" ngModel>
+                <span translate>Married</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio8" value="option2" name="unMarried"  ngModel>
+                <span>Unmarried</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleSelect1">Number of Dependents</label>
+          <select class="form-control" id="exampleSelect1" name="noOfDependent" ngModel>
+            <option name="0" >0</option>
+            <option name="1" >1</option>
+            <option name="2" >2</option>
+            <option name="3" >3</option>
+            <option name="4" >4</option>
+            <option name="5">5</option>
+          </select>
+        </div>
+
+
+
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="inlineRadio4" value="option1" name="havePet" ngModel>
+                <span translate>Have a pet?</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio8" value="option2" name="unMarried"  ngModel>
+                <span>Hobbies</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleSelect1">Select the Hobbies</label>
+          <select class="form-control" id="exampleSelect1" name="noOfDependent"  ngModel >
+            <option name="Reading" >Reading</option>
+            <option name="Swimming" >Swimming</option>
+            <option name="Dancing" >Dancing</option>
+          </select>
+        </div>
+
+
+        <button type="submit"  class="btn btn-danger">Add Tenant</button>
+      </form>
+
+    </ba-card>
+  </div>
+</div>
+-->
+

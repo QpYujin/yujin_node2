@@ -1,0 +1,241 @@
+
+
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}">
+  <div class="header-title-community">
+    <a routerLink="/pages/dashboard"></a>
+    <!-- <a routerLink="/pages/dashboard" class="al-logo clearfix">{{community}}</a>        -->
+  </div>
+  <a  class="al-logo clearfix"><span></span>Consensus</a>
+  <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+
+  <!--<div class="search">
+    <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
+    <input id="searchInput" type="text" placeholder="Search for...">
+  </div>-->
+  <div class="user-profile clearfix">
+    <div class="dropdown al-user-profile">
+      <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+        <img src="https://t4.ftcdn.net/jpg/01/07/85/89/240_F_107858989_SJogeLthvc6WZ6lP6EsuLlxIRNtsz4JH.jpg" height="45px" width ="45px">
+      </a>
+
+      <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+
+        <li class="dropdown-item"><a href><i class="fa fa-user"></i>{{user}}</a></li>
+        <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>
+        <li class="dropdown-item"><a href class="signout" (click)=authService.logout() ><i class="fa fa-power-off"></i>Sign out</a></li>
+      </ul>
+    </div>
+    <!-- <ba-msg-center></ba-msg-center>-->
+  </div>
+</div>
+<br><br><br>
+<div class="col-sm-8" style="margin-left: 20%">
+
+  <div class="colorChange">
+    <br>
+
+    <br><br>
+    <h2 style="color: black; margin-left: 2%;">Add Community</h2>
+
+    <div style="margin-left: 2%">
+
+
+
+
+
+      <form [formGroup]="communityForm" (submit)="saveCommunity()">
+
+
+        <div class="form-group">
+          <label name="firstName">Community Name</label>
+          <input  class="form-control" id="communityName" placeholder="Community Name" name="communityName"  formControlName="communityName">
+          <control-messages [control]="communityForm.controls.communityName"></control-messages>
+        </div>
+
+        <label >Choose Amenities </label>
+
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+
+
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"     name="FitnessCenter" value="FitnessCenter" formControlName="FitnessCenter">
+                <span>Fitness center</span>
+              </label>
+            </div>
+
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"    name="Spa" value="Spa" formControlName="Spa">
+                <span>Spa</span>
+              </label>
+            </div>
+
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"    name="Playground" value="Playground" formControlName="Playground">
+                <span>Playground</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="inlineRadio5" name="Pool" value="Pool" formControlName="Pool">
+                <span translate>Pool</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"    name="MediaRoom" value="MediaRoom" formControlName="MediaRoom">
+                <span>Media room</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"    name="PartyRoom" value="PartyRoom" formControlName="PartyRoom">
+                <span>Party room</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label >Community Description</label>
+          <textarea rows="4" cols="50" class="input-md textinput textInput form-control" formControlName="communityDescription" id="id_description" name="communityDescription" placeholder="Enter the description" style="margin-bottom: 10px" type="text" ></textarea>
+          <!-- <control-messages [control]="communityForm.controls.communityDescription"></control-messages>           -->
+        </div>
+
+
+        <div class="form-group">
+          <label name="firstName">Enter Address Or Zipcode</label>
+          <input  type="text" class="form-control" id="Community Location" placeholder="Zipcode or Address" name="communitylocation" formControlName="communitylocation">
+          <!-- <control-messages [control]="communityForm.controls.communitylocation"></control-messages> -->
+        </div>
+
+        <!--<div class="col-md-4">
+          <ba-card title="Upload Community Picture" baCardClass="with-scroll">
+            <ba-picture-uploader [picture]="profile.picture" [defaultPicture]="defaultPicture" [uploaderOptions]="uploaderOptions"></ba-picture-uploader>
+          </ba-card>
+        </div>-->
+        <br><br>
+
+
+        <div class="row">
+          <button type="submit"  class="btn btn-primary"> <a routerLink="/direct" style="color: white" >Back</a></button> &nbsp; &nbsp;
+          <button type="submit"  class="btn btn-primary">Add Community</button>
+        </div>
+      </form>
+
+
+
+  </div>
+</div>
+</div>
+
+<!--
+<br>
+<div class="col-sm-8" style="margin-left: 20%">
+
+<div class="colorChange">
+  <br>
+  <h4> <a class="btn btn-info"   *ngIf="authService.authenticated()" style="height: 30px;margin-left: 87%" (click)="authService.logout()"><h4>LOG OUT</h4></a></h4>
+  <br><br>
+  <h2 style="color: black; margin-left: 2%;">Add Community</h2>
+
+  <div >
+    <ba-card  baCardClass="with-scroll">
+      <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+
+        <div class="form-group">
+          <label name="firstName">Community Name</label>
+          <input  class="form-control" id="communityName" placeholder="Community Name" name="communityName"  ngModel required>
+
+        </div>
+
+
+        <label >Choose Amenities </label>
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" value="Fitness center" name="Fitness center"  ngModel>
+                <span translate>Fitness center</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio3"  name="Spa" value="option2" ngModel>
+                <span>Spa</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio3"  name="Playground" value="option2" ngModel>
+                <span>Playground</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="checkbox-demo-row">
+
+          <div class="input-demo  row">
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="inlineRadio5" name="Pool" value="option1" ngModel>
+                <span translate>Pool</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio3"  name="Media room" value="option2" ngModel>
+                <span>Media room</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox"  id="inlineRadio3"  name="Party room" value="option2" ngModel>
+                <span>Party room</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label >Community Description</label>
+          <textarea rows="4" cols="50" class="input-md textinput textInput form-control" ngModel id="id_number" name="communityDescription" placeholder="Enter the description" style="margin-bottom: 10px" type="text" ></textarea>
+        </div>
+
+
+        <div class="form-group">
+          <label name="firstName">Community Location</label>
+          <input  class="form-control" id="Community Location" placeholder="Community Location" name="communitylocation"  ngModel required>
+        </div>
+
+
+
+   <div class="row">
+        <button type="submit"  class="btn btn-danger"> <a routerLink="/direct" style="color: white" >Back</a></button> &nbsp; &nbsp;
+        <button type="submit"  class="btn btn-danger" [disabled]="!form.valid">Add Community</button>
+    </div>
+      </form>
+
+    </ba-card>
+  </div>
+</div>
+</div>
+
+-->

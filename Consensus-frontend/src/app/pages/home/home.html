@@ -1,0 +1,60 @@
+<div class="full-container">
+    <div class="header-banner">
+      <div class="header-banner-bar">
+        <a class="home-brand" style="background: transparent" routerLink="/pages" >Consensus</a>
+
+
+
+        <a class="btn btn-info btn-home-login" *ngIf="!authService.authenticated()" style="height: 30px" (click)="authService.login()">Sign In</a>
+        <a class="btn btn-info btn-home-login" *ngIf="authService.authenticated()" style="height: 30px" (click)="authService.login()">Sign Out</a>
+      </div>
+      <div class="banner-text-wrapper">
+        <div class="banner-text">
+          <h1>Consensus</h1>
+          <p>A Mission-Based Property Management:</p>
+        </div>
+      </div>
+    </div>
+    <div class="middle-panel">
+      <div class="row">
+        <div class="col-sm-6 main-description">
+          <h4>Consensus is the private social network for your neighborhood.</h4>
+          <p>
+            Consensus is the best way to stay in the know about what’s going on in your neighborhood—whether it’s finding a last-minute babysitter, learning about an upcoming block party, or hearing about a rash of car break-ins. There are so many ways our neighbors can help us. We just need an easier way to connect with them.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <img src="assets/img/laptop-main.png" width="100%" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="bottom-panel">
+      <div class="row text-center home-icon-container">
+         <div class="col-sm-4">
+           <img src="https://d19rpgkrjeba2z.cloudfront.net/55fbeab54d28237d/static/images/signup/us/useful@2x.png" alt="usefulness-icon">
+           <p>
+             </p><div class="subsubsection-header">Useful</div>
+             <div class="description-text">The easiest way to keep up with<br>everything in your neighborhood.</div>
+           <p></p>
+         </div>
+
+         <div class="col-sm-4">
+           <img src="https://d19rpgkrjeba2z.cloudfront.net/55fbeab54d28237d/static/images/signup/us/private@2x.png" alt="privacy-icon">
+           <p>
+             </p><div class="subsubsection-header">Private</div>
+             <div class="description-text">A private environment designed<br>just for you and your neighbors.</div>
+           <p></p>
+         </div>
+
+         <div class="col-sm-4">
+           <img src="https://d19rpgkrjeba2z.cloudfront.net/55fbeab54d28237d/static/images/signup/us/proven@2x.png" alt="neighbor-icon">
+           <p>
+             </p><div class="subsubsection-header">Proven</div>
+             <div class="description-text">
+                 Over 151,000 neighborhoods across the country rely on Nextdoor.
+             </div>
+           <p></p>
+         </div>
+       </div>
+    </div>
+</div>

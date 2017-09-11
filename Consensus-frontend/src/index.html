@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+ <base href="/">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="http://cdn.auth0.com/js/auth0/8.5/auth0.min.js"></script>
+  <script src="http://cdn.auth0.com/js/lock/10.18.0/lock.min.js"></script>
+
+
+
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+  <link rel="stylesheet" href="https://npmcdn.com/sweetalert2@4.0.15/dist/sweetalert2.min.css">
+  <script src="https://npmcdn.com/sweetalert2@4.0.15/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+
+  <title>Consensus</title>
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//analytics.deploybytes.com/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+
+<body>
+  <style media="screen">
+    #preloader-text{
+      color: #fff;
+    position: absolute;
+    z-index: 2000;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    margin-top: 80px;
+    }
+  </style>
+  <app>
+  </app>
+
+  <!-- <div id="preloader">
+    <div></div>
+  </div>
+  <div id="preloader-text">
+    Loading Your Community...
+  </div> -->
+</body>
+
+</html>

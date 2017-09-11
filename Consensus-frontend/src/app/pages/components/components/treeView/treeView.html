@@ -1,0 +1,65 @@
+<!--<div class="widgets">
+
+  <div class="row">
+    <ba-card  baCardClass="with-scroll" class="smart-table-container">
+      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
+    </ba-card>
+  </div>
+
+</div>-->
+<ba-card  baCardClass="with-scroll table-panel xmedium-card">
+
+
+
+
+  <label>Select Month </label>
+  <select [(ngModel)]="selectedMonth" (ngModelChange)="onChangeMonth($event)" >
+    <option *ngFor="let c of month" [ngValue]="c"> {{c.name}} </option>
+  </select>
+<br><br>
+  <h4 style="margin-left: 10%" *ngIf="!setBoolean">No Community Expenses activity Found for this Month</h4>
+
+  <div *ngIf="setBoolean">
+  <div class="vertical-scroll" >
+  <table class="table table-striped responsive-table">
+    <thead>
+    <tr>
+      <!-- <th class="table-id">#</th> -->
+      <th><h4>Month/Year</h4></th>
+      <th><h4>Expense Type</h4></th>
+      <th><h4>Expense Description</h4></th>
+      <th><h4>Vendor Name</h4></th>
+      <th><h4>Amount Paid</h4></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let item of communityExpenses">
+      <tr *ngIf="isCurrentYear(item.year)">
+        <!-- <td class="table-id">{{ item.id }}</td> -->
+        <td>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}</td>
+        <td >{{ item.expensesType }}</td>
+        <td>{{ item.community_Expenses_Description}}</td>
+        <td>{{ item.vendorName }}</td>
+        <td>{{ item.amountPaid}}</td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+  <div class="responsive-list">
+    <div *ngFor="let item of communityExpenses" class="tenant-list-item">
+      <p>
+        <br>
+        <b>Month/Year : </b>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}
+        <br><b>Expense Type : </b>{{ item.expensesType }}
+        <br><b>Expense Description : </b>{{ item.community_Expenses_Description}}
+        <br><b>Vendor Name : </b>{{ item.vendorName }}
+        <br><b>Amount Paid : </b>{{ item.amountPaid}}
+      </p>
+    </div>
+  </div>
+</div>
+  </div>
+</ba-card>
+
+<button  class="btn btn-primary">Export Expenses Report</button>

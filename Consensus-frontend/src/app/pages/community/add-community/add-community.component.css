@@ -1,0 +1,148 @@
+.colorChange{
+  background-color: white;
+}
+
+label {
+  margin-top: 16px;
+  display: block;
+  color: black;
+}
+fieldset.date {
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+  padding-bottom: .5em;
+  display: block;
+  border: none;
+}
+
+input{
+  color: #555;
+
+}
+
+label.custom-checkbox{
+ color: #555;
+}
+
+fieldset.date legend {
+  margin: 0;
+  padding: 0;
+  margin-top: .25em;
+  font-size: 100%;
+}
+
+
+fieldset.date label {
+  position: absolute;
+  top: -20em;
+  left: -200em;
+}
+
+fieldset.date select {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  display: inline;
+}
+
+span.inst {
+  font-size: 75%;
+  color: white;
+  padding-left: .25em;
+}
+
+
+fieldset.date select:active,
+fieldset.date select:focus,
+fieldset.date select:hover
+{
+  border-color: gray;
+  background-color:  #f2f2f2;
+}
+
+.form-control{
+  color: #555
+}
+
+control-messages{
+  color: #E82C0C;
+  margin: 6px 0;
+}
+
+button {
+  margin-top: 4px;
+  color: #fff;
+  background-color: #337ab7;
+  border: 1px solid #2e6da4;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: 1em;
+  font-weight: 300;
+}
+button[disabled] {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  opacity: .65;
+  cursor: not-allowed;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #8c8c8c;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #8c8c8c;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #8c8c8c;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #8c8c8c;
+}
+
+
+fieldset.date {
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+  padding-bottom: .5em;
+  display: block;
+  border: none;
+}
+
+fieldset.date legend {
+  margin: 0;
+  padding: 0;
+  margin-top: .25em;
+  font-size: 100%;
+}
+
+
+fieldset.date label {
+  position: absolute;
+  top: -20em;
+  left: -200em;
+}
+
+fieldset.date select {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  display: inline;
+}
+
+span.inst {
+  font-size: 75%;
+  color: white;
+  padding-left: .25em;
+}
+
+
+fieldset.date select:active,
+fieldset.date select:focus,
+fieldset.date select:hover
+{
+  border-color: gray;
+  background-color:  #f2f2f2;
+}
+
+
