@@ -12,16 +12,16 @@ import { AuthService } from '../../auth.service';
 
 export class CommunityExpTenants {
 
-  communityExpenses :any; expenses=[];monthString:string;setBoolean:boolean;selectedMonth:any
+  communityExpenses :any; expenses=[];monthString:string;setBoolean:boolean;
 
   cities = [{'name': 'SF'}, {'name': 'NYC'}, {'name': 'Buffalo'}];
-  month = [{'name': '----','id':'0'},{'name': 'January','id':'1'}, {'name': 'February','id':'2'}, {'name': 'March','id':'3'},
-        {'name': 'April','id':'4'}, {'name': 'May','id':'5'}, {'name': 'June','id':'6'},
-       {'name': 'July','id':'7'}, {'name': 'August','id':'8'}, {'name': 'September','id':'9'},
-       {'name': 'October','id':'10'}, {'name': 'November','id':'11'}, {'name': 'December','id':'12'}];
-
+  month = [{'name': 'January','id':1}, {'name': 'February','id':2}, {'name': 'March','id':3},
+    {'name': 'April','id':4}, {'name': 'May','id':5}, {'name': 'June','id':6},
+    {'name': 'July','id':7}, {'name': 'August','id':8}, {'name': 'September','id':9},
+    {'name': 'October','id':10}, {'name': 'November','id':11}, {'name': 'December','id':12}];
+ selectedMonth = this.month[0];
   ngOnInit(){ //override
-    this.selectedMonth = this.month[0];
+
   }
   constructor(
   private communityService:CommunityService,
@@ -71,9 +71,9 @@ if(this.communityExpenses !=null || this.communityExpenses !=[]){
 
       console.log("picked month"+month.name +this.communityExpenses[i].month);
 
-      if(this.communityExpenses[i].month == month.name){
+      if(this.communityExpenses[i].myDate.date.month == month.id){
         this.expenses.push(this.communityExpenses[i]);
-        console.log("checked the value"+this.communityExpenses[i].month);
+
       }
     }
 

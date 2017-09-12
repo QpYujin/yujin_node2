@@ -21,10 +21,10 @@ export class Register {
   public submitted:boolean = false;
 
   cities = [{'name': 'SF'}, {'name': 'NYC'}, {'name': 'Buffalo'}];
-  month = [{'name': '----','id':'0'},{'name': 'January','id':'1'}, {'name': 'February','id':'2'}, {'name': 'March','id':'3'},
-    {'name': 'April','id':'4'}, {'name': 'May','id':'5'}, {'name': 'June','id':'6'},
-    {'name': 'July','id':'7'}, {'name': 'August','id':'8'}, {'name': 'September','id':'9'},
-    {'name': 'October','id':'10'}, {'name': 'November','id':'11'}, {'name': 'December','id':'12'}];
+  month = [{'name': '----','id':0},{'name': 'January','id':1}, {'name': 'February','id':2}, {'name': 'March','id':3},
+    {'name': 'April','id':4}, {'name': 'May','id':5}, {'name': 'June','id':6},
+    {'name': 'July','id':7}, {'name': 'August','id':8}, {'name': 'September','id':9},
+    {'name': 'October','id':10}, {'name': 'November','id':11}, {'name': 'December','id':12}];
   selectedMonth :any;
 
   ngOnInit(){ //override
@@ -54,6 +54,7 @@ export class Register {
         this.tenantService.getTenantsPayment().then(
           data => {
             this.tenantsPayment = data;
+            console.log(this.tenantsPayment);
 
             if( this.tenantsPayment.length >0){
 
@@ -64,12 +65,12 @@ export class Register {
 
                     this.tenantp.push(this.tenantsPayment[j].amountPaid);
 
-                  this.month1.push(this.tenantsPayment[j].month);
-                  this.year.push(this.tenantsPayment[j].year);
+                  this.month1.push(this.tenantsPayment[j].myDate.jsdate);
+
                 }
-                else{
+              /*  else{
                   j++
-                }
+                }*/
               }
 
               for (var i = 0; i < this.tenantp.length; i++) {
@@ -77,12 +78,12 @@ export class Register {
                   {
                     amountPaid: this.tenantp[i],
                     month: this.month1[i],
-                    year: this.year[i]
+
 
                   });
               }
 
-                console.log(this.ExpensesTenantList)
+                console.log(this.ExpensesTenantList);
 
 
               if(this.ExpensesTenantList[0]['amountPaid'] === undefined){
@@ -141,8 +142,8 @@ export class Register {
 
                   this.tenantp.push(this.tenantsPayment[j].amountPaid);
 
-                  this.month1.push(this.tenantsPayment[j].month);
-                  this.year.push(this.tenantsPayment[j].year);
+                  this.month1.push(this.tenantsPayment[j].myDate.jsdate);
+                  this.year.push(this.tenantsPayment[j].myDate.date.month);
                 }
                 else{
                   j++
@@ -163,14 +164,23 @@ export class Register {
 
               var temp=[];
 
-              for (var i = 0; i < this.ExpensesTenantList.length; i++) {
+              if(month.name == "----"  && month.id == 0){
 
-                if(this.ExpensesTenantList[i]['month'] == month.name){
-
-                  console.log(this.ExpensesTenantList[i]['month']);
-
-                  temp.push(this.ExpensesTenantList[i])
+                console.log("Here is --- in the month --  "+JSON.stringify(this.ExpensesTenantList));
+                for(var  i =0;i <this.ExpensesTenantList.length;i++) {
+                 temp.push(this.ExpensesTenantList[i]);
                 }
+              }
+
+              else {
+                for (var i = 0; i < this.ExpensesTenantList.length; i++) {
+
+                  if (this.ExpensesTenantList[i]['year'] == month.id) {
+
+                    temp.push(this.ExpensesTenantList[i])
+                  }
+                }
+
               }
               console.log(temp);
               this.ExpensesTenantList=temp;

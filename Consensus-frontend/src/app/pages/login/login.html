@@ -25,9 +25,9 @@
   <div class="auth-block" *ngIf="tenantAccess==false">
 
 
-    <h2 *ngIf="!setBoolean"> 
-     
-      
+    <h2 *ngIf="!setBoolean">
+
+
    <div class="container ">
       <h1>Start Adding Your Community Now</h1>
       <div class="form-group">
@@ -45,7 +45,7 @@
     </a></h2>
 
     <h2  *ngIf="setBoolean" > <a routerLink="/pages" class="auth-link"  > View Your Community </a>
-     
+
    <div class="container ">
       <h1>Click to Add More Communities(Paid Feature)</h1>
       <div class="form-group">
@@ -58,13 +58,18 @@
 
   </h2>
 
+
+
+
+</div>
+
   <div class="auth-block" *ngIf="tenantAccess==true">
 
     <h1 >!!! Welcome !!!</h1>
 
 
-      <div class="row">
-        <a class="auth-link" style="color: black">Click here to &nbsp;</a>
+    <div class="row" style="margin-left: 38%">
+      <a class="auth-link" style="color: black">Click here to &nbsp;</a>
       <a  routerLink="/tenantPayment" class="auth-link" >View Tenant Expenses /&nbsp;</a>
       <a style="color: #b32d00" routerLink="/communityExpenses" class="auth-link" >Community Expenses </a>
     </div>
@@ -72,6 +77,4 @@
 
 
   </div>
-
-
 </div>
