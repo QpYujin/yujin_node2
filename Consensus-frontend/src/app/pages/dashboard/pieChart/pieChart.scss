@@ -72,18 +72,18 @@
     margin-left: 0.1em;
     font-size: .8em;
   }
-    .description {
-      display: inline-block;
-      padding: 10px 0 0 0px;
+  .description {
+    display: inline-block;
+    padding: 10px 0 0 0px;
 
-      font-size: 15px;
-      opacity: 0.9;
-      width: 50%;
-      .description-stats {
-        padding-top: 8px;
-        font-size: 24px;
-      }
+    font-size: 15px;
+    opacity: 0.9;
+    width: 50%;
+    .description-stats {
+      padding-top: 8px;
+      font-size: 24px;
     }
+  }
 
   .angular {
     margin-top: 100px;

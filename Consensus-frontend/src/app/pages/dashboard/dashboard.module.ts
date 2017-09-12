@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -42,11 +42,13 @@ import {NewUserService} from '../../../restApi/newUsers.services'
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     MomentModule,
     ChartsModule,
     AppTranslationModule,
     NgaModule,
     routing,
+
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB-59QEf0Y6j_EBoOxRBp0HM8dJ3PZ0mGg',
       libraries: ["places"]

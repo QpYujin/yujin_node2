@@ -1,18 +1,27 @@
 import {
     Component,
-    OnInit
+    OnInit,ViewChild ,
+     ElementRef, NgModule, NgZone
 }
 from '@angular/core';
-import {
-    FormGroup,
-    AbstractControl,
+
+    
+
+import { 
     FormBuilder,
-    Validators
-}
+      AbstractControl,
+     FormControl, 
+     FormGroup,
+    Validators} 
 from '@angular/forms';
+
+import { AgmCoreModule, MapsAPILoader } from '@agm/core';
+
+
 import {
     CommunityService
 }
+
 from '../../../restApi/community.services';
 import {
     NewUserService
@@ -40,6 +49,17 @@ export class Login implements OnInit {
     public password: AbstractControl;
     public submitted: boolean = false;
 
+     public latitude: number;
+    public longitude: number;
+    public searchControl: FormControl;
+    public zoom: number;
+    
+    @ViewChild("search")
+    public searchElementRef: ElementRef;
+    
+   
+
+
     name: any;
 
     userInfo: any;
@@ -54,7 +74,8 @@ export class Login implements OnInit {
     constructor(fb: FormBuilder,
         private newUserService: NewUserService, private communityService: CommunityService,
         private tenantService: TenantService,
-        private authService: AuthService) {
+        private authService: AuthService, private mapsAPILoader: MapsAPILoader,
+      private ngZone: NgZone) {
         this.form = fb.group({
             'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
@@ -77,12 +98,52 @@ export class Login implements OnInit {
     }
 
     ngOnInit(): void {
+
+     //set google maps defaults
+    this.zoom = 16;
+    this.latitude = 39.8282;
+    this.longitude = -98.5795;
+    
+    //create search FormControl
+    this.searchControl = new FormControl();
+    
+    //set current position
+    this.setCurrentPosition();
+    
+    //load Places Autocomplete
+    this.mapsAPILoader.load().then(() => {
+      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+        types: ["address"]
+      });
+      autocomplete.addListener("place_changed", () => {
+        this.ngZone.run(() => {
+          //get the place result
+          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+  
+          //verify result
+          if (place.geometry === undefined || place.geometry === null) {
+            return;
+          }
+          
+          //set latitude, longitude and zoom
+          this.latitude = place.geometry.location.lat();
+          this.longitude = place.geometry.location.lng();
+
+         localStorage.setItem('communitylng', place.geometry.location.lng().toString());
+         localStorage.setItem('communitylat',place.geometry.location.lat().toString());
+          //set latitude, longitude and zoom
+          this.zoom = 16;
+        });
+      });
+    });
+
+
         console.log("in ngOnInit in the dashboard .ts", this.authService.authenticated());
         this.tenantAccess = false;
 
+             localStorage.setItem('addCommunityLocation','Y')
 
-                        
-                    console.log(' am I  admin?');
+             console.log(' am I  admin?');
               this.userInfo = localStorage.getItem('profile');
                    
                 this.communityService.getCommunitiesByUser().then(data => {
@@ -91,9 +152,14 @@ export class Login implements OnInit {
                             console.log("get community" + this.community)
 
                             if (this.community.communityName == null && this.community.length == 0) {
+
                                 this.setBoolean = false;
+                               
+                              
                             } else {
-                                this.setBoolean = true;
+
+                                  this.setBoolean = true;
+                                  localStorage.setItem('addCommunityLocation','N')
                             }
 
                             localStorage.setItem('communityName', this.community.communityName);
@@ -139,4 +205,15 @@ export class Login implements OnInit {
             }
 
 }
+
+    private setCurrentPosition() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.zoom = 12;
+      });
+    }
+  }
+
 }

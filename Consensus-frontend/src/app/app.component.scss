@@ -5,6 +5,10 @@ main::before{
   background: initial !important;
 }
 
+ .fa ,fa-angle-down{
+ display:none;
+ }
+
 :host /deep/ {
   @mixin layout-collapsed() {
     .al-main {
@@ -117,6 +121,9 @@ main::before{
     .menu-collapsed {
       @include sidebar-hidden();
     }
+     .al-sidebar {
+      width: 200px;
+      }
     .al-main {
       margin-left: 0;
     }

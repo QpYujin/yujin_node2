@@ -9,9 +9,9 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TenantService {
 
-  //temp ="localhost:3001";
+  temp ="localhost:3001";
   //temp ="consensusnode.deploybytes.com";
-  temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
+  //temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
 
 
   private addTenantUrl ='http://'+this.temp+'/api/addTenant/';
@@ -23,6 +23,8 @@ export class TenantService {
 
   private addTenantPaymentUrl= 'http://'+this.temp+'/api/addTenantExpense/';
   private getTenantPaymentUrl='http://'+this.temp+'/api/getTenantExpense/';
+  
+   private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
 
   private get10TenantPaymentUrl='http://'+this.temp+'/api/getTenantExpenseOnly10/';
 
@@ -96,6 +98,18 @@ export class TenantService {
     console.log(this.getTenantPaymentUrl+localStorage.getItem('communityId'));
     return this.http
       .get(this.getTenantPaymentUrl+localStorage.getItem('communityId'))
+      .toPromise()
+      .then(response => response.json())
+      .catch(this.handleError);
+  }
+
+
+
+
+ getExpenseByTenantsPayment(tenantId,firstName ) {
+    console.log(this.getExpenseByTenantPaymentUrl+localStorage.getItem('communityId')+'/'+tenantId);
+    return this.http
+      .get(this.getExpenseByTenantPaymentUrl+localStorage.getItem('communityId')+'/'+tenantId)
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);

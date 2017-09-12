@@ -9,7 +9,6 @@ export class PieChartService {
 
   getData() {
     let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
-
     return [
       {
         color: pieColor,
@@ -33,5 +32,11 @@ export class PieChartService {
         icon: 'money',
       }
     ];
+
+
+
+
+
+
   }
 }
