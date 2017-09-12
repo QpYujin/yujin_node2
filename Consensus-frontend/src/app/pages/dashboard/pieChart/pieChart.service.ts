@@ -31,7 +31,8 @@ export class PieChartService {
         color: pieColor,
         description: 'dashboard.returned',
         stats: '0',
-         icon: 'money',
+        icon: 'money',
+
       }
     ];
   }

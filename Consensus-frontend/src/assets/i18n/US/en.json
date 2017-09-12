@@ -69,13 +69,13 @@
   "dashboard": {
     "acquisition_channels": "Community Expenses",
     "users_by_country": "Community Map",
-    "revenue": "Net Balance",
+    "revenue": "Revenue",
     "feed": "Payment Record",
     "todo_list": "Reminder",
     "calendar": "Events Calendar",
     "no_tenant": "Tenants",
     "no_groups": "Groups",
-    "no_projects": "Projects Progress",
+    "no_projects": "Projects progress",
     "returned": "Revenue",
     "popular_app": {
       "super_app": "Tao Ocean",

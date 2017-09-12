@@ -19,7 +19,6 @@ export class Feed {
     tenantsPayment: any;
     public feed: Array < Object > ;
     data: any;
-
     query: string = '';
     setBoolean: boolean;
     tenantsId = [];
@@ -28,11 +27,8 @@ export class Feed {
     tenantp = [];date=[];
     tenantName = [];
     ExpensesTenantList = [];
-
-
-    constructor(private _feedService: FeedService,
-        private tenantService: TenantService) {
-
+constructor(private _feedService: FeedService,
+       private tenantService: TenantService) {
 
       this.tenantService.getTenantsPayment().then(
         data => {
@@ -50,14 +46,11 @@ export class Feed {
 
       let currentMonth= this.isCurrentYear();
 
-
             for (var i = 0; i < this.tenantsPayment.length; i++) {
 
               if(currentMonth == this.tenantsPayment[i].myDate.date.month) {
                 this.ExpensesTenantList.push(
                   {
-
-
                     TenantName: this.tenantsPayment[i].tenantName,
 
                     amountPaid: this.tenantsPayment[i].amountPaid,
@@ -65,19 +58,12 @@ export class Feed {
 
                     date: this.tenantsPayment[i].myDate.jsdate
 
-
                   });
               }
             }
           }
 
-
-
         });
-
-
-
-
     }
 
     ngOnInit() {
@@ -87,7 +73,6 @@ export class Feed {
     expandMessage(message) {
         message.expanded = !message.expanded;
     }
-
 
   isCurrentYear(){
     let date = new Date();
