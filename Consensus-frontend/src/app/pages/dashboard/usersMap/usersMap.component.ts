@@ -8,6 +8,9 @@ import {Location} from '@angular/common';
 import {} from '@types/googlemaps';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import { FormsModule, ReactiveFormsModule}  from '@angular/forms'
+
+
 declare var google: any;
 
 @Component({
@@ -17,79 +20,74 @@ declare var google: any;
 })
 export class UsersMap implements OnInit{
   title = 'app';
-  lat: number = 42.2834603;
-  lng: number = -71.72665899999998;
-  zoom;any;
-  //
+  lat: number ;
+  lng: number ;
+  public latitude: number;
+  public longitude: number;
+ 
+  public zoom: number;
+  
+
   mGoogleMapStyle : any;
   mMapsAPILoader : any;
   mMapData : any;
   mLocation : any;
   mCommunityService : any;
+  searchlocationlng : any;
+  searchlocationlat: any;
+  constructor(public router : Router, public mapsAPILoader : MapsAPILoader, public communityService : CommunityService
+             )
+  {
+   this.lat=42.24;
+   this.lng=-71.6895578;
 
-  constructor(public router : Router, public mapsAPILoader : MapsAPILoader, public communityService : CommunityService,
-             ){
-    // Map Style Changes
-   // this.mGoogleMapStyle        = UsersMapConst.satelite;
-    this.zoom =21;
+  this.mMapsAPILoader = mapsAPILoader;
 
-    this.setCurrentPosition();
-    this.mMapsAPILoader = mapsAPILoader;
-    this.mCommunityService = communityService;
-    this.mCommunityService.getCommunitiesByUser().
-    then(community => {
-      this.mLocation = community.communitylocation;
-      this.mMapsAPILoader.load().then(() => {
-          console.log('google script loaded');
-          this.getAddressFromZipCode();
-      });
+ 
 
-    });
-    // this.mMapData               = UsersMapConst.map_sample_data;
+
+
+  this.mCommunityService = communityService;
+
+      this.mCommunityService.getCommunitiesByUser().
+      then(community => {
+
+      this.searchlocationlat = community.searchlocationlat;
+      this.searchlocationlng = community.searchlocationlng;
+      console.log('value of location lat before:'+ this.searchlocationlat );
+       this.mapsAPILoader.load().then(() => {
+           
+                
+       this.lat =   parseFloat(this.searchlocationlat);
+       this.lng =   parseFloat(this.searchlocationlng)  ;
+       this.zoom = 21;
+
+         });
+        
+       });
+
+
+
+    
+    
+    
   }
   ngOnInit(): void {
     console.log("in ngOnInit");
-  }
+     }
 
-  public getThemeColor(intitaive){
-    if (intitaive == "Low Carbon Campus"){
-      return "#8BB75E"
-    }
-    else if (intitaive == "Resilient Ecosystems"){
-      return "#7655A7"
-    }
-    else if (intitaive == "Material Lifecycles"){
-      return "#AA374C"
-    }
-    else if (intitaive == "Healthy People"){
-      return "#EDA85F"
-    }
-    else if (intitaive == "Thriving Networks"){
-      return "#70B4E2"
-    }
-  }
 
-  getAddressFromZipCode()
-  {
-    let geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address' : this.mLocation}, (results, status) => {
-      if (status == google.maps.GeocoderStatus.OK) {
-        let lat = results[0].geometry.location.lat();
-        let lng = results[0].geometry.location.lng();
+private setCurrentPosition() {
 
-        this.lat = lat;
-        this.lng = lng;
-      }
-    });
-  }
-
-  private setCurrentPosition() {
+  localStorage.setItem('communitylat', '42.3251803');
+   localStorage.setItem('communitylng','-71.6895578') ;
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.lat = position.coords.latitude;
         this.lng = position.coords.longitude;
-
+         //localStorage.setItem('communitylng', position.coords.longitude.toString());
+         //localStorage.setItem('communitylat',position.coords.latitude.toString());
         this.zoom = 21;
 
 

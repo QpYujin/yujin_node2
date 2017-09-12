@@ -1,6 +1,5 @@
 import {Component,OnInit, ElementRef} from '@angular/core';
 import { AuthService } from '../../auth.service';
-// import * as GoogleMapsLoader from 'google-maps';
 import {CommunityService} from '../../../restApi/community.services';
 import{NewUserService} from '../../../restApi/newUsers.services';
 import {TenantService} from '../../../restApi/tetants.services'
@@ -25,9 +24,11 @@ community:any;tenants:any;
 
 
   ngAfterViewInit() {
+
   
   }
   ngOnInit(): void {
+
    console.log("in ngOnInit in the dashboard .ts" ,this.authService.authenticated());
 
     this.userInfo=localStorage.getItem('profile');
@@ -38,7 +39,11 @@ community:any;tenants:any;
 
     };
 
-
+    if (localStorage.getItem('firstLoad')=='Y')
+    {
+      window.location.reload();
+      localStorage.setItem('firstLoad','N');
+     }
 
     this.communityService.getCommunitiesByUser().
     then(data => {
@@ -50,15 +55,12 @@ community:any;tenants:any;
 
     });
 
+
     this.tenantService.getTenantsByCommunity()
       .then(data => {
         this.tenants = data;
-
         localStorage.setItem('noTenants', this.tenants.length);
-
-
-
-      });
+ });
 
     if(this.i == 1 ){
       window.location.reload();

@@ -96,7 +96,7 @@
   <textarea formControlName="profile" id="profile"></textarea>
   <control-messages [control]="userForm.controls.profile"></control-messages>-->
 
-  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  <button type="submit" ng-change="fetchTenants()" [disabled]="!userForm.valid" >Submit</button>
 </form>
 
 </ba-card>

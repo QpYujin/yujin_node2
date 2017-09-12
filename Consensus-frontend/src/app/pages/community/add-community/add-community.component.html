@@ -30,21 +30,22 @@
   </div>
 </div>
 <br><br><br>
-<div class="col-sm-8" style="margin-left: 20%">
+<div class="col-sm-8"  style="color: black; margin-left: 20%;margin-top: 5%">
 
   <div class="colorChange">
     <br>
 
     <br><br>
-    <h2 style="color: black; margin-left: 2%;">Add Community</h2>
+    <h2 style="color: black; padding-left: 40%; position: relative">Add Community</h2>
 
-    <div style="margin-left: 2%">
+    <div style="margin-left: 20%">
 
 
 
 
 
       <form [formGroup]="communityForm" (submit)="saveCommunity()">
+
 
 
         <div class="form-group">
@@ -115,12 +116,9 @@
           <!-- <control-messages [control]="communityForm.controls.communityDescription"></control-messages>           -->
         </div>
 
-
-        <div class="form-group">
-          <label name="firstName">Enter Address Or Zipcode</label>
-          <input  type="text" class="form-control" id="Community Location" placeholder="Zipcode or Address" name="communitylocation" formControlName="communitylocation">
-          <!-- <control-messages [control]="communityForm.controls.communitylocation"></control-messages> -->
-        </div>
+     
+  
+    
 
         <!--<div class="col-md-4">
           <ba-card title="Upload Community Picture" baCardClass="with-scroll">
@@ -130,8 +128,8 @@
         <br><br>
 
 
-        <div class="row">
-          <button type="submit"  class="btn btn-primary"> <a routerLink="/direct" style="color: white" >Back</a></button> &nbsp; &nbsp;
+        <div class="row" style="padding-left: 40%; position: relative;">
+          
           <button type="submit"  class="btn btn-primary">Add Community</button>
         </div>
       </form>

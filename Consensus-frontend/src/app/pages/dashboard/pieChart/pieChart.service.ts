@@ -15,22 +15,22 @@ export class PieChartService {
         color: pieColor,
         description: 'dashboard.no_tenant',
         stats: localStorage.getItem('noTenants'),
-        icon: 'person',
+        icon: 'Money-Increase.svg',
       }, {
         color: pieColor,
         description: 'dashboard.no_groups',
         stats: '0',
-        icon: 'face',
+        icon: 'Apartment.svg',
       }, {
         color: pieColor,
         description: 'dashboard.no_projects',
         stats: '0',
-        icon: 'money',
+        icon: 'Bell.svg',
       }, {
         color: pieColor,
         description: 'dashboard.returned',
         stats: '0',
-        icon: 'money',
+        icon: 'Boss-3.svg',
       }
     ];
   }

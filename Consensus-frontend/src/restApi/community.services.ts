@@ -11,8 +11,8 @@ import 'rxjs/add/operator/map';
 export class CommunityService {
 
   //temp ="consensusnode.deploybytes.com";
-  //temp ="localhost:3001";
-  temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
+  temp ="localhost:3001";
+ // temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
 
 
 

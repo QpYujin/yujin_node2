@@ -55,7 +55,7 @@ title:any;
 
   }
 
-
+f
 
 saveUser() {
   if (this.userForm.dirty && this.userForm.valid) {
@@ -64,6 +64,7 @@ saveUser() {
 
     this.tenantService.addTenant(this.userForm.value).then(() => {
       console.log("sucess")
+      localStorage.setItem('firstLoad','Y'); 
       this.showAlert();
       this.userForm.reset()
 
