@@ -75,8 +75,8 @@
     "calendar": "Events Calendar",
     "no_tenant": "Tenants",
     "no_groups": "Groups",
-    "no_projects": "Projects progress",
-    "returned": "Revenue",
+    "no_projects": "Projects Progress",
+    "returned": "Net Balance",
     "popular_app": {
       "super_app": "Tao Ocean",
       "most_popular_app": "Number Of Tenants",

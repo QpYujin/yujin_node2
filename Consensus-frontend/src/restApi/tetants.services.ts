@@ -26,8 +26,6 @@ export class TenantService {
   
    private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
 
-   private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
-
   private get10TenantPaymentUrl='http://'+this.temp+'/api/getTenantExpenseOnly10/';
 
 
