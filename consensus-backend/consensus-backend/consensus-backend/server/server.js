@@ -15,7 +15,7 @@ const uuidV4 = require('uuid/v4');
 
 var mongojs = require('mongojs');
 
-var db = mongojs('mongodb://qpair:qpair@ds121543.mlab.com:21543/consensus', ['community','tenant','user','communityExpenses','tenantExpenses','communityReminders','communityEvents']);
+var db = mongojs('mongodb://qpair:qpair@ds133084.mlab.com:33084/consensus', ['community','tenant','user','communityExpenses','tenantExpenses','communityReminders','communityEvents']);
 
 app.options('*', cors());
 app.use(cors());
