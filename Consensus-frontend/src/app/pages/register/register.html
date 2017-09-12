@@ -57,7 +57,7 @@
         <ng-container *ngFor="let item of ExpensesTenantList">
           <tr>
             <!-- <td class="table-id">{{ item.id }}</td> -->
-            <td >{{ item.month}}&nbsp;-&nbsp;{{ item.year}}</td>
+            <td >{{ item.month | date}}</td>
 
             <td>${{ item.amountPaid }}</td>
           </tr>

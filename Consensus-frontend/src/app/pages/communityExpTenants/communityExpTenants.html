@@ -33,7 +33,7 @@
 
   <label>Select Month </label>
   <select [(ngModel)]="selectedMonth" (ngModelChange)="onChangeMonth($event)" >
-    <option *ngFor="let c of month" [ngValue]="c" [selected]="c===0"> {{c.name}}  </option>
+    <option *ngFor="let c of month" [ngValue]="c"> {{c.name}} </option>
   </select>
 <br><br>
   <h4 style="margin-left: 10%" *ngIf="!setBoolean">No Community Expenses activity Found </h4>
@@ -41,7 +41,7 @@
   <div *ngIf="setBoolean">
     <h2 style="text-align: center">Community Expenses Record</h2><br>
   <div class="vertical-scroll" >
-  <table class="table table-striped responsive-table">
+  <table class="table table-striped responsive-table" style="text-align:center;">
     <thead>
     <tr>
       <!-- <th class="table-id">#</th> -->
@@ -55,9 +55,9 @@
     </thead>
     <tbody>
     <ng-container *ngFor="let item of communityExpenses">
-      <tr *ngIf="isCurrentYear(item.year)">
+      <tr *ngIf="isCurrentYear(item.myDate.date.year)">
         <!-- <td class="table-id">{{ item.id }}</td> -->
-        <td style="text-align:center;">{{ item.month}}&nbsp;-&nbsp;{{ item.year}}</td>
+        <td style="text-align:center;">{{ item.myDate.jsdate | date}}</td>
         <td style="text-align:center;">{{ item.expensesType }}</td>
         <td style="text-align:center;">{{ item.community_Expenses_Description}}</td>
         <td style="text-align:center;">{{ item.vendorName }}</td>
@@ -69,8 +69,7 @@
   <div class="responsive-list">
     <div *ngFor="let item of communityExpenses" class="tenant-list-item">
       <p>
-        <br>
-        <b>Month/Year : </b>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}
+        <br><b>Month/Year : </b>{{ item.myDate.jsdate | date}}
         <br><b>Expense Type : </b>{{ item.expensesType }}
         <br><b>Expense Description : </b>{{ item.community_Expenses_Description}}
         <br><b>Vendor Name : </b>{{ item.vendorName }}

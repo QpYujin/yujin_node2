@@ -27,7 +27,11 @@ export class TrafficChart {
   type: string = 'doughnut';
   position: string = 'left';
   legend: boolean = false;
+  chartOptions = {
 
+  cutoutPercentage: 50,
+
+};
 
   datasets: any[] = [{
     data: [ 5450, 3350, 4100, 3000, 1000 ],

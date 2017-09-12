@@ -3,10 +3,11 @@
   <div class="chart-bg"></div>
   <div class="traffic-chart" id="trafficChart">
     <div class="canvas-holder">
-      <canvas baseChart
+      <canvas baseChart width="500" height="500"
               [datasets]="datasets"
               [labels]="labels"
               [chartType]="type"
+              [options]="chartOptions"
               [legend]="legend"
       >
       </canvas>
