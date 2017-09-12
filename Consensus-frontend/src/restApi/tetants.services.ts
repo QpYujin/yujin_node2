@@ -68,6 +68,11 @@ export class TenantService {
   }
 
 
+
+
+
+
+
   getTenantsByEmail() {
     console.log(this.getTenantsEmailUrl+localStorage.getItem('userEmail'));
     return this.http

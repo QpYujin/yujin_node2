@@ -14,14 +14,14 @@ export class ChartistJs {
   data:any;
   query: string = '';
   tenantsId=[];
-  tenantp=[];tenantName=[]; ExpensesTenantList=[];month1=[];year=[];sortedExpenses=[];name=[]
+  tenantp=[];tenantName=[]; ExpensesTenantList=[];month1=[];year=[];sortedExpenses=[];name=[];date=[];
   setBoolean:boolean
 
   cities = [{'name': 'SF'}, {'name': 'NYC'}, {'name': 'Buffalo'}];
-  month = [{'name': '----','id':'0'},{'name': 'January','id':'1'}, {'name': 'February','id':'2'}, {'name': 'March','id':'3'},
-    {'name': 'April','id':'4'}, {'name': 'May','id':'5'}, {'name': 'June','id':'6'},
-    {'name': 'July','id':'7'}, {'name': 'August','id':'8'}, {'name': 'September','id':'9'},
-    {'name': 'October','id':'10'}, {'name': 'November','id':'11'}, {'name': 'December','id':'12'}];
+  month = [{'name': '----','id':0},{'name': 'January','id':1}, {'name': 'February','id':2}, {'name': 'March','id':3},
+    {'name': 'April','id':4}, {'name': 'May','id':5}, {'name': 'June','id':6},
+    {'name': 'July','id':7}, {'name': 'August','id':8}, {'name': 'September','id':9},
+    {'name': 'October','id':10}, {'name': 'November','id':11}, {'name': 'December','id':12}];
   selectedMonth :any;
 
   ngOnInit(){ //override
@@ -32,54 +32,34 @@ export class ChartistJs {
     let iMonth = date.getMonth();
     this.selectedMonth = this.month[iMonth];
     this.setBoolean =true;
-    this.tenantService.getTenantsByCommunity().then(
-      data => {
-        this.tenants = data;
+
         this.tenantService.getTenantsPayment().then(
           data => {
             this.tenantsPayment = data;
-            for(var  i =0;i <this.tenants.length;i++){
-              this.tenantsId.push( this.tenants[i]._id);
-              this.tenantName.push( this.tenants[i].firstName+" "+this.tenants[i].lastName);
-            }
-            console.log("arary is  "+this.tenantsId);
-            console.log("arary is  "+this.tenantName);
-            for(var  i =0;i <this.tenantsId.length;i++){
-              for(var  j =0; j<this.tenantsPayment.length;j++){
-                //  console.log("arary is  "+this.tenantsId[i] +" "+this.tenantsPayment[j].tenant_id);
-                if(this.tenantsId[i] == this.tenantsPayment[j].tenant_id){
-                  if(this.tenantsPayment[j].amountPaid == null || this.tenantsPayment[j].amountPaid == ""){
-                    this.tenantp.push("Unpaid");
-                  }
-                  else {
-                    this.tenantp.push(this.tenantsPayment[j].amountPaid);
-                  }
-                  this.month1.push( this.tenantsPayment[j].month);
-                  this.year.push( this.tenantsPayment[j].year);
-                  this.name.push(this.getTenantname(this.tenantsPayment[j].tenant_id,this.tenants));
-                }
-              }
-            }
 
-            console.log(this.tenantp)
+           // console.log("This is selected month"+JSON.stringify(this.tenantsPayment[20].myDate.jsdate));
+
 
             for (var i=0; i<this.tenantsPayment.length; i++) {
               this.ExpensesTenantList.push(
                 {
 
-                  TenantName: this.name[i],
-                  // TenantId: this.tenantId[i],
-                  amountPaid:this.tenantp[i],
-                  month:this.month1[i],
-                  year:this.year[i]
-                  //monthYear: $scope.month_year[i]
+
+                  TenantName: this.tenantsPayment[i].tenantName,
+
+                  amountPaid:this.tenantsPayment[i].amountPaid,
+
+
+                  date:this.tenantsPayment[i].myDate.jsdate
+
 
 
                 });
             }
-            console.log("Tenant payment list is "+JSON.stringify(this.ExpensesTenantList));
+
+
           });
-      });
+
   }
 
   isCurrentYear(year){
@@ -94,7 +74,7 @@ export class ChartistJs {
     var t ;var d;
     //this.monthId= month.id;
     this.setBoolean =true;
-    this.tenantp=[];this.tenantName=[]; this.ExpensesTenantList=[];this.month1=[];this.year=[];this.sortedExpenses=[];this.tenantsId=[];this.name=[]
+    this.tenantp=[];this.tenantName=[]; this.ExpensesTenantList=[];this.month1=[];this.year=[];this.sortedExpenses=[];this.tenantsId=[];this.name=[];this.date=[];
     this.tenantService.getTenantsByCommunity()
       .then(data => {
         this.tenants = data;
@@ -103,8 +83,8 @@ export class ChartistJs {
           .then(data => {
             this.tenantsPayment = data;
 
-            this.tenantsPayment = data;
-            for(var  i =0;i <this.tenants.length;i++){
+
+            /*for(var  i =0;i <this.tenants.length;i++){
               this.tenantsId.push( this.tenants[i]._id);
               this.tenantName.push( this.tenants[i].firstName+" "+this.tenants[i].lastName);
             }
@@ -127,18 +107,20 @@ export class ChartistJs {
               }
             }
 
-            console.log(this.tenantp)
+            console.log(this.tenantp);*/
 
             for (var i=0; i<this.tenantsPayment.length; i++) {
               this.ExpensesTenantList.push(
                 {
 
-                  TenantName: this.name[i],
-                  // TenantId: this.tenantId[i],
-                  amountPaid:this.tenantp[i],
-                  month:this.month1[i],
-                  year:this.year[i]
-                  //monthYear: $scope.month_year[i]
+
+                  TenantName: this.tenantsPayment[i].tenantName,
+
+                  amountPaid:this.tenantsPayment[i].amountPaid,
+
+                  month:this.tenantsPayment[i].myDate.date.month,
+                  date:this.tenantsPayment[i].myDate.jsdate
+
 
 
                 });
@@ -149,7 +131,7 @@ export class ChartistJs {
 
             for(var  i =0;i <this.ExpensesTenantList.length;i++){
 
-              if(this.ExpensesTenantList[i].month == month.name){
+              if(this.ExpensesTenantList[i].month == month.id){
                 this.sortedExpenses.push(this.ExpensesTenantList[i]);
 
               }

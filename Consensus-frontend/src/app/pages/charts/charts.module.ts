@@ -3,7 +3,7 @@ import { CommonModule }  from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 //import {MyDatePickerModule} from '../../../../node_modules/angular2-datepicker/src/my-date-picker/my-date-picker.module'
-
+import { MyDatePickerModule } from 'mydatepicker';
 import { NgaModule } from '../../theme/nga.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { routing }       from './charts.routing';
@@ -32,6 +32,7 @@ import { ControlMessagesComponent } from '../shared/formValidation/control-messa
     EditorsModule,
     NgaModule,
     Ng2SmartTableModule,
+    MyDatePickerModule,
     routing,
 
 

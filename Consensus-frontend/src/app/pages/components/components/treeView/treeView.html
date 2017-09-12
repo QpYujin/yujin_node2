@@ -35,9 +35,9 @@
     </thead>
     <tbody>
     <ng-container *ngFor="let item of communityExpenses">
-      <tr *ngIf="isCurrentYear(item.year)">
+      <tr *ngIf="isCurrentYear(item.myDate.date.year)">
         <!-- <td class="table-id">{{ item.id }}</td> -->
-        <td>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}</td>
+       <td>{{ item.myDate.jsdate | date}}</td>
         <td >{{ item.expensesType }}</td>
         <td>{{ item.community_Expenses_Description}}</td>
         <td>{{ item.vendorName }}</td>
@@ -50,7 +50,7 @@
     <div *ngFor="let item of communityExpenses" class="tenant-list-item">
       <p>
         <br>
-        <b>Month/Year : </b>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}
+       <!-- <b>Month/Year : </b>{{ item.month}}&nbsp;-&nbsp;{{ item.year}}-->
         <br><b>Expense Type : </b>{{ item.expensesType }}
         <br><b>Expense Description : </b>{{ item.community_Expenses_Description}}
         <br><b>Vendor Name : </b>{{ item.vendorName }}

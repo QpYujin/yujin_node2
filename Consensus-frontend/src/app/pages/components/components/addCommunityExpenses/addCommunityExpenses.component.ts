@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import {CommunityService} from '../../../../../restApi/community.services';
 import { ValidationService } from '../../../shared/formValidation/validation.service';
+import {IMyDpOptions, IMyDateModel} from 'mydatepicker';
 
 import * as moment from 'moment'
 
@@ -38,6 +39,10 @@ export class AddCommunityExpenses {
     StartTime: null
   };
 
+  private myDatePickerOptions: IMyDpOptions = {
+    // other options...
+    dateFormat: 'dd.mm.yyyy',
+  };
 
   constructor(protected communityService: CommunityService,
               private formBuilder: FormBuilder) {
@@ -45,9 +50,10 @@ export class AddCommunityExpenses {
     this.tenantPaymentForm = this.formBuilder.group({
       // 'name': ['', Validators.required],
       'expensesType': ['', Validators.required],
-      'month': ['', Validators.required],
+  /*    'month': ['', Validators.required],
       'day': ['', Validators.required],
-      'year': ['', Validators.required],
+      'year': ['', Validators.required],*/
+      'myDate': [null, Validators.required],
       'amountPaid': ['', [Validators.required,Validators.minLength(1),Validators.maxLength(16),ValidationService.numbersOnly]],
       'vendorName': ['', [Validators.required,Validators.minLength(5),Validators.maxLength(16),ValidationService.nameOnly]],
       'community_Expenses_Description': ['',[Validators.required,Validators.minLength(5),Validators.maxLength(600)]]
@@ -97,6 +103,22 @@ export class AddCommunityExpenses {
     });
 
 
+  }
+
+  setDate(): void {
+    // Set today date using the patchValue function
+    let date = new Date();
+    this.tenantPaymentForm.patchValue({myDate: {
+      date: {
+        year: date.getFullYear(),
+        month: date.getMonth() + 1,
+        day: date.getDate()}
+    }});
+  }
+
+  clearDate(): void {
+    // Clear the date using the patchValue function
+    this.tenantPaymentForm.patchValue({myDate: null});
   }
 
   showAlert() {

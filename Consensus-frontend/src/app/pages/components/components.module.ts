@@ -5,6 +5,7 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TreeModule } from 'ng2-tree';
+import { MyDatePickerModule } from 'mydatepicker';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { routing }       from './components.routing';
 import { Components } from './components.component';
@@ -25,8 +26,8 @@ import{EditorsModule} from '../editors/editors.module'
     NgbModule,
     TreeModule,
     routing,
-    Ng2SmartTableModule,
     NKDatetimeModule,
+    MyDatePickerModule,
     EditorsModule
 
   ],
@@ -44,6 +45,6 @@ import{EditorsModule} from '../editors/editors.module'
     SmartTablesService,
 
   ],
-  //exports: [ ControlMessagesComponent ]
+  exports: [  MyDatePickerModule ]
 })
 export class ComponentsModule {}

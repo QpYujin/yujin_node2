@@ -14,7 +14,7 @@ var app = express();
 const uuidV4 = require('uuid/v4');
 
 var mongojs = require('mongojs');
-//var db = mongojs('mongodb://prasadsuvarapu:prasadc85!@ds121543.mlab.com:21543/consensus', ['community','tenant','user','communityExpenses','tenantExpenses','communityReminders','communityEvents']);
+
 var db = mongojs('mongodb://qpair:qpair@ds121543.mlab.com:21543/consensus', ['community','tenant','user','communityExpenses','tenantExpenses','communityReminders','communityEvents']);
 
 app.options('*', cors());
@@ -25,8 +25,6 @@ app.use(bodyParser.json());
 
 
 app.use(function(req, res, next) {
-   // res.header("Access-Control-Allow-Origin", "*");
-   // res.setHeader('Access-Control-Allow-Methods', '*');
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept");

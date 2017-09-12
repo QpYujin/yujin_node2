@@ -20,6 +20,7 @@ export class PieChartService {
         description: 'dashboard.no_groups',
         stats: '0',
         icon: 'face',
+
       }, {
         color: pieColor,
         description: 'dashboard.no_projects',
@@ -30,6 +31,7 @@ export class PieChartService {
         description: 'dashboard.returned',
         stats: '0',
         icon: 'money',
+
       }
     ];
 
