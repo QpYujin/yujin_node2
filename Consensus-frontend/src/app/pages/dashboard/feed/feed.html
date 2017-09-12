@@ -1,6 +1,7 @@
 <div class="feed-messages-container">
   <h4 style="margin-left: 10%" *ngIf="!setBoolean">No Tenant Payment activity Found</h4>
   <div *ngIf="setBoolean">
+
   <div   class="feed-message" *ngFor="let message of ExpensesTenantList" (click)="expandMessage(message)">
 
     <div class="message-icon" *ngIf="message.type != 'text-message'">
@@ -24,7 +25,7 @@
 
         </div>
         <div class="ago-time">
-          {{ message.monthYear  | amTimeAgo}}
+          {{ message.date | amTimeAgo }}
         </div>
       </div>
     </div>

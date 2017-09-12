@@ -19,105 +19,51 @@ export class Feed {
     tenantsPayment: any;
     public feed: Array < Object > ;
     data: any;
-   
     query: string = '';
     setBoolean: boolean;
     tenantsId = [];
     list = [];
     monthYear = [];
-    tenantp = [];
+    tenantp = [];date=[];
     tenantName = [];
     ExpensesTenantList = [];
+constructor(private _feedService: FeedService,
+       private tenantService: TenantService) {
+
+      this.tenantService.getTenantsPayment().then(
+        data => {
+
+          this.tenantsPayment = data;
+          console.log("This is selected month"+JSON.stringify(this.tenantsPayment));
+
+          if(this.tenantsPayment.length == 0){
+
+            console.log("Tenant"+ this.tenantsPayment.length);
+            this.setBoolean = false;
+          }
+          if(this.tenantsPayment.length != 0 ) {
+            this.setBoolean = true;
+
+      let currentMonth= this.isCurrentYear();
+
+            for (var i = 0; i < this.tenantsPayment.length; i++) {
+
+              if(currentMonth == this.tenantsPayment[i].myDate.date.month) {
+                this.ExpensesTenantList.push(
+                  {
+                    TenantName: this.tenantsPayment[i].tenantName,
+
+                    amountPaid: this.tenantsPayment[i].amountPaid,
 
 
-    constructor(private _feedService: FeedService,
-        private tenantService: TenantService) {
+                    date: this.tenantsPayment[i].myDate.jsdate
 
-        this.tenantService.getTenantsByCommunity()
-            .then(data => {
+                  });
+              }
+            }
+          }
 
-                this.tenants = data;
-                var tenantLoop;
-
-                for (tenantLoop = 0; tenantLoop < this.tenants.length ; tenantLoop++) {
-
-                this.tenantName.push({tenantId: this.tenants[tenantLoop]._id, 
-                                    firstName: this.tenants[tenantLoop].firstName});
-
-
-                }
-                
-
-            });
-
-
-setTimeout(() => 
-{
-
-
-
-
-             for (var i = 0; i < this.tenantName.length ; i++) {
-
-                var data = this.tenantName[i];
-
-                   var tenantId = data.tenantId ;
-                   var  firstName =  data.firstName ;
-                  
-                
-                
-
-                      this.tenantService.getExpenseByTenantsPayment(tenantId,firstName)
-                        .then(data => {
-
-
-                            this.tenantsPayment = data;
-
-               
-
-                            for (var i = 0; i < this.tenantsPayment.length ; i++) {
-
-                             
-
-                                if (this.tenantsPayment[i].amountPaid == "" || this.tenantsPayment[i].amountPaid == null) {
-
-                                    this.setBoolean = false;
-
-                                } else {
-
-                                   
-
-                                    this.setBoolean = true;
-
-                                    this.ExpensesTenantList.push({
-                                   
-                                        amountPaid: this.tenantsPayment[i].amountPaid,
-                                        monthYear: this.tenantsPayment[i].monthYear
-
-                                    });
-
-
-
-
-                                }
-
-
-
-                            }
-                         
-
-
-
-                             });
-                       
-                      }
-
-},
-2000);
-
-
-
-
+        });
     }
 
     ngOnInit() {
@@ -128,5 +74,12 @@ setTimeout(() =>
         message.expanded = !message.expanded;
     }
 
+  isCurrentYear(){
+    let date = new Date();
+    let iMonth = date.getMonth()+1;
+    console.log(iMonth)
+
+    return iMonth;
+  }
 
 }

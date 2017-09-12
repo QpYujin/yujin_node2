@@ -26,6 +26,8 @@ export class TenantService {
   
    private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
 
+   private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
+
   private get10TenantPaymentUrl='http://'+this.temp+'/api/getTenantExpenseOnly10/';
 
 
@@ -66,6 +68,11 @@ export class TenantService {
       .then(response => response.json())
       .catch(this.handleError);
   }
+
+
+
+
+
 
 
   getTenantsByEmail() {
