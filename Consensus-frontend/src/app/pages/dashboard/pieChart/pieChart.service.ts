@@ -19,17 +19,17 @@ export class PieChartService {
       }, {
         color: pieColor,
         description: 'dashboard.no_groups',
-        stats: '6',
+        stats: '0',
         icon: 'face',
       }, {
         color: pieColor,
         description: 'dashboard.no_projects',
-        stats: '4',
+        stats: '0',
         icon: 'money',
       }, {
         color: pieColor,
         description: 'dashboard.returned',
-        stats: '32,592',
+        stats: '0',
         icon: 'money',
       }
     ];

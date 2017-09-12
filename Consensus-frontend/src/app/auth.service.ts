@@ -21,7 +21,7 @@ var options = {
 export class AuthService {
   // Configure Auth0
  // lock = new Auth0Lock('0mxwpb5RLX5142oHCCjWRFjmk5LNENQy', 'ramani.auth0.com', options);
-  lock = new Auth0Lock('0mxwpb5RLX5142oHCCjWRFjmk5LNENQy', 'ramani.auth0.com', {
+  lock = new Auth0Lock('hluGymViD3Dm1GZ3qm8Om7xwKgJkCwWu', 'qpairio.auth0.com', {
     auth: {
       allowedConnections: ['google'],
       redirect: false,
