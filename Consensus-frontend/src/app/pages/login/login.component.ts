@@ -5,14 +5,14 @@ import {
 }
 from '@angular/core';
 
-    
 
-import { 
+
+import {
     FormBuilder,
       AbstractControl,
-     FormControl, 
+     FormControl,
      FormGroup,
-    Validators} 
+    Validators}
 from '@angular/forms';
 
 import { AgmCoreModule, MapsAPILoader } from '@agm/core';
@@ -53,11 +53,11 @@ export class Login implements OnInit {
     public longitude: number;
     public searchControl: FormControl;
     public zoom: number;
-    
+
     @ViewChild("search")
     public searchElementRef: ElementRef;
-    
-   
+
+
 
 
     name: any;
@@ -70,6 +70,7 @@ export class Login implements OnInit {
     users: any;
     tenantAccess;
     any;
+    user:any
 
     constructor(fb: FormBuilder,
         private newUserService: NewUserService, private communityService: CommunityService,
@@ -82,7 +83,8 @@ export class Login implements OnInit {
         });
 
         //window.history.go(-1);  /*  Uncomment this line if you want you to browser back button to go back to  two pages back in the browser history */
-
+      this.user= localStorage.getItem('currentUser');
+      console.log("user in direct page"+this.user)
         this.email = this.form.controls['email'];
         this.password = this.form.controls['password'];
 
@@ -103,13 +105,13 @@ export class Login implements OnInit {
     this.zoom = 16;
     this.latitude = 39.8282;
     this.longitude = -98.5795;
-    
+
     //create search FormControl
     this.searchControl = new FormControl();
-    
+
     //set current position
     this.setCurrentPosition();
-    
+
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
@@ -119,12 +121,12 @@ export class Login implements OnInit {
         this.ngZone.run(() => {
           //get the place result
           let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-  
+
           //verify result
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-          
+
           //set latitude, longitude and zoom
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
@@ -145,7 +147,7 @@ export class Login implements OnInit {
 
              console.log(' am I  admin?');
               this.userInfo = localStorage.getItem('profile');
-                   
+
                 this.communityService.getCommunitiesByUser().then(data => {
                             this.community = data;
 
@@ -154,8 +156,8 @@ export class Login implements OnInit {
                             if (this.community.communityName == null && this.community.length == 0) {
 
                                 this.setBoolean = false;
-                               
-                              
+
+
                             } else {
 
                                   this.setBoolean = true;
@@ -194,11 +196,11 @@ export class Login implements OnInit {
 
                           this.communityService.getCommunitiesById().then(data => {
                             this.community = data;
-                           
 
-                            localStorage.setItem('communityName', this.community.communityName);          
+
+                            localStorage.setItem('communityName', this.community.communityName);
                         });
-                
+
 
 
             });

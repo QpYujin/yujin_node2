@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { AuthHttp } from 'angular2-jwt';
+import { CONFIG } from '../app/config';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -9,14 +10,13 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class NewUserService {
 
- //temp ="localhost:3001";
-  //temp ="consensusnode.deploybytes.com";
-  temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
+ /*//temp ="localhost:3001";
+  temp ="consensusnode.deploybytes.com";
+  //temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"*/
 
+  private addNewUsers = 'http://'+CONFIG.REST_API_URL+'/api/addUSer';
 
-  private addNewUsers = 'http://'+this.temp+'/api/addUSer';
-
-  private getUsersUrl='http://'+this.temp+'/api/getUsers/';
+  private getUsersUrl='http://'+CONFIG.REST_API_URL+'/api/getUsers/';
 
 
   constructor(private http: Http, private authHttp: AuthHttp) { }

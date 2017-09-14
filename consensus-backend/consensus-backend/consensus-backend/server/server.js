@@ -95,7 +95,7 @@ console.log(req.params.user_id+"  id is hre")
 //
 app.get('/api/viewCommunities/:community_id', function(req, res) {
 
-console.log(req.params.community_id+"  id is hre")
+console.log(req.params.community_id+"  id is hre");
 
 
     db.community.findOne({'community_id' : req.params.community_id},function(err,user) {
@@ -208,7 +208,7 @@ app.post('/api/addUSer', function(req, res) {
         if(user){
 
             userId=user.userId;
-            console.log(userId);
+            console.log("this existing user"+userId);
             return user;
         }
         else{
@@ -223,7 +223,7 @@ app.post('/api/addUSer', function(req, res) {
                 }
             })
             console.log("Here is Added User");
-            res.statusCode = 200      
+            res.statusCode = 200   ;
            // res.end();
 
         }
@@ -355,7 +355,7 @@ app.put('/api/editTenant', function(request, response) {
 
     editTenant.invite =true;
 
-    console.log("AFter ************" +JSON.stringify(editTenant)) ;
+    console.log("AFter edit tenant************" +JSON.stringify(editTenant)) ;
 
 
 

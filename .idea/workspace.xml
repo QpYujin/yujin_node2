@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a7b7814-bf8b-4d8c-9f90-4d1549b76084" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/auth0-variables.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.component.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.scss" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/pieChart/index.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/pieChart/index.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/pieChart/pieChart.component.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/pieChart/pieChart.component.ts" />
@@ -16,10 +18,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.service.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.html" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.scss" afterPath="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/restApi/community.services.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/restApi/community.services.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/restApi/newUsers.services.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/restApi/newUsers.services.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Consensus-frontend/src/restApi/tetants.services.ts" afterPath="$PROJECT_DIR$/Consensus-frontend/src/restApi/tetants.services.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consensus-backend/consensus-backend/consensus-backend/server/server.js" afterPath="$PROJECT_DIR$/consensus-backend/consensus-backend/consensus-backend/server/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,31 +46,15 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+            <state relative-caret-position="391">
+              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#1084#1090#0" expanded="true" />
+                <element signature="e#1171#1177#0" expanded="true" />
+                <element signature="e#1309#1315#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ckeditor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor/ckeditor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ckeditor1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -72,40 +62,21 @@
       <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="442">
               <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
+                <marker date="1505336452401" expanded="true" signature="794:1256" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
-              <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus-backend/consensus-backend/consensus-backend/server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7684">
-              <caret line="452" column="7" lean-forward="false" selection-start-line="452" selection-start-column="7" selection-end-line="452" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trafficChart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="55" column="39" lean-forward="false" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -115,28 +86,74 @@
         <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
-              <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+              <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth0-variables.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth0-variables.ts">
+      <file leaf-file-name="config.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/config.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trafficChart.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss">
+      <file leaf-file-name="add-community.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="205" column="11" lean-forward="false" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="11" />
+            <state relative-caret-position="1290">
+              <caret line="342" column="26" lean-forward="true" selection-start-line="342" selection-start-column="26" selection-end-line="342" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2465">
+              <caret line="190" column="14" lean-forward="true" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-community.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="74" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-community.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,6 +164,20 @@
     <findStrings>
       <find>communityExpenses</find>
       <find>canvas</find>
+      <find>margin-left</find>
+      <find>page-top</find>
+      <find>profile-dropdown</find>
+      <find>user-profile</find>
+      <find>al-user-profile</find>
+      <find>.top</find>
+      <find>.top-dropdown-menu</find>
+      <find>top-dropdown-menu</find>
+      <find>collapse-menu-link</find>
+      <find>dropdown</find>
+      <find>.dropdown-menu</find>
+      <find>user</find>
+      <find>dropdown-item</find>
+      <find>dropdown-menu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,13 +191,18 @@
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.html" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.component.ts" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/communityExpTenants/communityExpTenants.html" />
-        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" />
         <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/config.ts" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.html" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.scss" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.scss" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html" />
       </list>
     </option>
   </component>
@@ -175,6 +211,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/consensus-backend/consensus-backend/consensus-backend/server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -315,7 +354,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +384,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
+              <option name="myItemId" value="community" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="add-community" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,7 +400,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Consensus-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -395,6 +438,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -433,11 +482,12 @@
       <updated>1505170668482</updated>
       <workItem from="1505170670942" duration="1504000" />
       <workItem from="1505241477862" duration="9611000" />
+      <workItem from="1505399038042" duration="5649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11115000" />
+    <option name="totallyTimeSpent" value="16764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -448,7 +498,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.051282052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -460,6 +509,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.051282052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -494,13 +544,99 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+          <folding>
+            <element signature="e#1084#1090#0" expanded="true" />
+            <element signature="e#1171#1177#0" expanded="true" />
+            <element signature="e#1309#1315#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor/ckeditor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+            <marker date="1505336452401" expanded="true" signature="794:1256" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus-backend/consensus-backend/consensus-backend/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7684">
+          <caret line="452" column="7" lean-forward="false" selection-start-line="452" selection-start-column="7" selection-end-line="452" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth0-variables.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3485">
+          <caret line="205" column="11" lean-forward="false" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/feed/feed.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -508,9 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,9 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -546,9 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="120" column="64" lean-forward="false" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,9 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,19 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="55" column="66" lean-forward="false" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2703">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#104#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,9 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,9 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,9 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="149" column="48" lean-forward="true" selection-start-line="149" selection-start-column="48" selection-end-line="149" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,9 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="11" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="34" column="65" lean-forward="true" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,16 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#ba-card#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,17 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/editors/components/ckeditor1/ckeditor1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="1020">
           <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
           <folding />
         </state>
@@ -739,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +825,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="3485">
           <caret line="205" column="11" lean-forward="false" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="11" />
           <folding />
         </state>
@@ -762,33 +834,18 @@
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth0-variables.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="442">
           <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+            <marker date="1505336452401" expanded="true" signature="794:1256" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -796,7 +853,91 @@
     <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/register/register.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
-          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <caret line="55" column="39" lean-forward="false" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/auth0-variables.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/dashboard/trafficChart/trafficChart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="342" column="26" lean-forward="true" selection-start-line="342" selection-start-column="26" selection-end-line="342" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/community/add-community/add-community.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#1084#1090#0" expanded="true" />
+            <element signature="e#1171#1177#0" expanded="true" />
+            <element signature="e#1309#1315#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consensus-frontend/src/app/pages/login/login.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="190" column="14" lean-forward="true" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
           <folding />
         </state>
       </provider>

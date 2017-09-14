@@ -1,7 +1,7 @@
 import { Injectable , Inject}      from '@angular/core';
 import { Router } from '@angular/router';
 import { tokenNotExpired ,JwtHelper} from 'angular2-jwt';
-
+import { CONFIG } from './config';
 import{ NewUserService} from '../restApi/newUsers.services'
 import {CommunityService} from '../restApi/community.services';
 
@@ -20,12 +20,12 @@ var options = {
 @Injectable()
 export class AuthService {
   // Configure Auth0
-  lock = new Auth0Lock('hluGymViD3Dm1GZ3qm8Om7xwKgJkCwWu', 'qpairio.auth0.com', {
+  lock = new Auth0Lock( CONFIG.CLIENT_ID, CONFIG.CLIENT_DOMAIN, {
     auth: {
       allowedConnections: ['google'],
       redirect: false,
-      //redirectUrl: 'http://consensus.deploybytes.com/callback',
-       redirectUrl: 'http://localhost:4200/callback',
+      redirectUrl: CONFIG.REDIRECT,
+       //redirectUrl: 'http://34.207.180.227:4200/callback',
 
       responseType: 'token id_token',
       params: {

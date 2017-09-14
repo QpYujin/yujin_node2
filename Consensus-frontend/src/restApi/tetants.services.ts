@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { AuthHttp } from 'angular2-jwt';
+import { CONFIG } from '../app/config';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -9,26 +10,23 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TenantService {
 
-  temp ="localhost:3001";
-  //temp ="consensusnode.deploybytes.com";
-  //temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
 
 
-  private addTenantUrl ='http://'+this.temp+'/api/addTenant/';
-  private getTenantsUrl = 'http://'+this.temp+'/api/tenant/';
-  private getTenantsEmailUrl = 'http://'+this.temp+'/api/getTenants/';
+  private addTenantUrl ='http://'+CONFIG.REST_API_URL+'/api/addTenant/';
+  private getTenantsUrl = 'http://'+CONFIG.REST_API_URL+'/api/tenant/';
+  private getTenantsEmailUrl = 'http://'+CONFIG.REST_API_URL+'/api/getTenants/';
   //private id ='595cfcf5f9e2e537a48c7fe4';
 
-  private editTenantUrl ='http://'+this.temp+'/api/editTenant'
+  private editTenantUrl ='http://'+CONFIG.REST_API_URL+'/api/editTenant'
 
-  private addTenantPaymentUrl= 'http://'+this.temp+'/api/addTenantExpense/';
-  private getTenantPaymentUrl='http://'+this.temp+'/api/getTenantExpense/';
-  
-   private getExpenseByTenantPaymentUrl='http://'+this.temp+'/api/getExpenseByTenant/';
-  private get10TenantPaymentUrl='http://'+this.temp+'/api/getTenantExpenseOnly10/';
+  private addTenantPaymentUrl= 'http://'+CONFIG.REST_API_URL+'/api/addTenantExpense/';
+  private getTenantPaymentUrl='http://'+CONFIG.REST_API_URL+'/api/getTenantExpense/';
+
+   private getExpenseByTenantPaymentUrl='http://'+CONFIG.REST_API_URL+'/api/getExpenseByTenant/';
+  private get10TenantPaymentUrl='http://'+CONFIG.REST_API_URL+'/api/getTenantExpenseOnly10/';
 
 
-  private sendTenantInviteUrl= 'http://'+this.temp+'/api/sendEmailtoTenant';
+  private sendTenantInviteUrl= 'http://'+CONFIG.REST_API_URL+'/api/sendEmailtoTenant';
 
   constructor(private http: Http, private authHttp: AuthHttp) { }
 
@@ -82,6 +80,7 @@ export class TenantService {
   }
 
   editTenant(data){
+    console.log("edit Tenant" +JSON.stringify(data));
     return this.http
       .put(this.editTenantUrl,data)
       .toPromise()

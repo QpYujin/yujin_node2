@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { AuthHttp } from 'angular2-jwt';
+import { CONFIG } from '../app/config';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -10,24 +11,19 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CommunityService {
 
-  //temp ="consensusnode.deploybytes.com";
-  temp ="localhost:3001";
- // temp ="ec2-34-207-180-227.compute-1.amazonaws.com:3001"
 
+  private addCommunityUrl = 'http://'+CONFIG.REST_API_URL+'/api/addCommunity';
+  private viewCommunitiesUrl = 'http://'+CONFIG.REST_API_URL+'/api/viewCommunities/';
+  private addNewUsers = 'http://'+CONFIG.REST_API_URL+'/api/addUSer';
 
+  private addCommunityExpensesUrl = 'http://'+CONFIG.REST_API_URL+'/api/addCommunityExpense/';
+  private getCommunityExpenseUrl = 'http://'+CONFIG.REST_API_URL+'/api/getCommunityExpense/';
 
-  private addCommunityUrl = 'http://'+this.temp+'/api/addCommunity';
-  private viewCommunitiesUrl = 'http://'+this.temp+'/api/viewCommunities/';
-  private addNewUsers = 'http://'+this.temp+'/api/addUSer';
+  private addCommunityReminderUrl = 'http://'+CONFIG.REST_API_URL+'/api/addCommunityReminder/';
+  private getCommunityReminderUrl = 'http://'+CONFIG.REST_API_URL+'/api/getCommunityReminder/';
 
-  private addCommunityExpensesUrl = 'http://'+this.temp+'/api/addCommunityExpense/';
-  private getCommunityExpenseUrl = 'http://'+this.temp+'/api/getCommunityExpense/';
-
-  private addCommunityReminderUrl = 'http://'+this.temp+'/api/addCommunityReminder/';
-  private getCommunityReminderUrl = 'http://'+this.temp+'/api/getCommunityReminder/';
-
-  private addCommunityEventsUrl = 'http://'+this.temp+'/api/addCommunityEvents/';
-  private getCommunityEventsUrl = 'http://'+this.temp+'/api/getCommunityEvents/';
+  private addCommunityEventsUrl = 'http://'+CONFIG.REST_API_URL+'/api/addCommunityEvents/';
+  private getCommunityEventsUrl = 'http://'+CONFIG.REST_API_URL+'/api/getCommunityEvents/';
 
 
   constructor(private http: Http, private authHttp: AuthHttp) { }

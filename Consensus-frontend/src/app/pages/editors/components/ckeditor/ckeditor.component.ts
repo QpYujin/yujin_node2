@@ -56,10 +56,10 @@ export class Ckeditor implements OnInit{
 
   };
 
-    this.tenantService.sendTenantInvite(mail)
+   /* this.tenantService.sendTenantInvite(mail)
       .then(data => {
 
-      });
+      });*/
 
     var user={
       email:data.email,
@@ -70,12 +70,13 @@ export class Ckeditor implements OnInit{
     };
 
     this.newUserService.addUsers(user);
+
    var t ={
      tenantId:data._id
-   }
+   };
     this.tenantService.editTenant(t)
     .then(data => {
-
+     console.log("Tenant invite is edited");
     });
 
     window.location.reload();
