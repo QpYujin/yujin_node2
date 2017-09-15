@@ -10,7 +10,12 @@ var path = require('path');
 var logger = require('morgan');
 var gittags = require('git-tags');
 var branch = require('git-branch');
+
+
+
 var gitCommits = require('git-commits');
+
+//var simpleGit = require('simple-git')( workingDirPath );
 var path = require('path');
 var repoPath = path.resolve(process.env.REPO || (__dirname + '/.git'));
 var cookieParser = require('cookie-parser');
@@ -74,21 +79,58 @@ gittags.get(function(err, tags) {
         limit: 2
     }).on('data', function(commit) {
 
-        buildInfo={
-            "branchnName":branch.sync(),
-            "tags":tags,
-           // "2 latest commit":commit
 
-        };
+        var gitlog = require('gitlog')
+            , options =
+            { repo: __dirname + '/.git'
+                , number: 2
+                , author: ''
+                , fields:
+                [ 'hash'
+                    , 'abbrevHash'
+                    , 'subject'
+                    , 'authorName'
+                    , 'authorDateRel'
+                     ,'rawBody'
+                    ,'body'
+
+                ]
+                , execOptions:
+                {       }
+            }
+
+var gitBranch =branch.sync();
+        console.log(gitBranch);
+        var cmd=require('node-cmd');
+
+        cmd.get(
+            'git show v1.0.5',
+            function(err, data, stderr){
+                console.log('the current working dir is : ',data)
+
+            }
+        );
+        gitlog(options, function(error, commits) {
+            // Commits is an array of commits in the repo
+           // console.log(commits)
+
+            buildInfo={
+                "branchnName":branch.sync(),
+                "tags":tags,
+                "latest commit":commit,
+                "commits":commits
 
 
+            };
 
+
+        res.json(buildInfo);
 
     })
-
+    })
 
 });
-    res.json(buildInfo);
+
 });
 
 var  userId;var communityId;
