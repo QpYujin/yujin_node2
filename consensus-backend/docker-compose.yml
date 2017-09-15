@@ -1,6 +1,0 @@
-client:
-    build: .
-
-    volumes:
-        - .:/usr/src/app
-    command: npm start
