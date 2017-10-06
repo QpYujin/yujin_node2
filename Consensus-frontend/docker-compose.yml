@@ -1,8 +1,0 @@
-version: "2.0"
-
-services:
-  consensus-frontend:
-    build: .
-    ports:
-      - "80:4200"
-      # Port 80 is used as it is the default port used by route53

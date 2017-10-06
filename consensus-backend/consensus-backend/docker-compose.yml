@@ -1,7 +1,10 @@
-client:
+version: "2"
+services:
+  client:
     build: .
     ports:
         - "3001:3001"
+    image: qpair/nodejs
     volumes:
         - .:/usr/src/app
     command: npm start

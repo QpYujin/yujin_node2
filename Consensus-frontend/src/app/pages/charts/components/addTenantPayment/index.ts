@@ -1,1 +1,0 @@
-export * from './addTenantPayment.component';
